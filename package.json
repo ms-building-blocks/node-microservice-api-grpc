@@ -1,0 +1,39 @@
+{
+  "name": "store",
+  "version": "0.0.1",
+  "description": "A microservice boilerplate for node-restify-grpc",
+  "main": "base.js",
+  "scripts": {
+    "start": "nodemon base",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+  "npm": ">=3",
+  "node": ">=5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.invox.io:7999/ser/store.git"
+  },
+  "author": "Tim Meade <tim@invoxio.com>",
+  "license": "MIT",
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "async": "^2.1.5",
+    "aws-sdk": "^2.32.0",
+    "bcrypt": "^1.0.2",
+    "color": "^1.0.3",
+    "colors": "^1.1.2",
+    "grpc": "^1.2.0",
+    "knex": "^0.12.9",
+    "md5": "^2.2.1",
+    "moment": "^2.18.1",
+    "mssql": "^3.3.0",
+    "request": "^2.81.0",
+    "restify": "^4.3.0",
+    "restify-router": "^0.4.2",
+    "s3": "^4.4.0",
+    "s3-upload-stream": "^1.0.7",
+    "sync-request": "^4.0.1"
+  }
+}

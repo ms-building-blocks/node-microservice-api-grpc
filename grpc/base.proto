@@ -1,0 +1,29 @@
+
+syntax = "proto3";
+
+package base;
+
+service grpcService {
+  rpc List (Empty) returns (UserList) {}
+  rpc Insert (User) returns (Empty) {}
+  rpc Get (UserIdRequest) returns (User) {}
+  rpc Delete (UserIdRequest) returns (Empty) {}
+  rpc Watch (Empty) returns (stream User) {}    
+}
+
+message Empty {}
+
+message User {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+}
+
+message UserList {
+  repeated User users = 1;
+}
+
+
+message UserIdRequest {
+  int32 id = 1;
+}
