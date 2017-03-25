@@ -5,7 +5,7 @@ This is a big time early work.  We are posting at this early stage as we could n
 
 We are very interested in thoughts or comments though.
 
-Intentions are great things.  Well, we INTEND to activly add to this as we are building out a large kubernetes stack and this (for now) is our boilerplate for the services.  Stay tuned for rapid updates.
+Intentions are great things.  Well, we INTEND to actively add to this as we are building out a large kubernetes stack and this (for now) is our boilerplate for the services.  Stay tuned for rapid updates.
 
 ## Requirements
 
@@ -29,16 +29,7 @@ yarn or npm install.
 
 No tests currently.  Stay tuned.  
 
-There are API endpoints that should work out of the box, see the API section, and there is a client example in the /examples/grpc folder.
-
-```
-node client list
-node client add
-node client insert 1 Bob bob@here.com
-node client get 123
-node client delete 1
-node client watch # Run in seperate terminal will push new users to screen
-```
+There are examples.  See the API section and the gRPC section.
 
 ## Deployment
 
@@ -49,7 +40,17 @@ This is being designed and meant for kubernetes clusters.   We will be adding de
 The code should be pretty easy to follow.  The gRPC is under the grpc folder and the restify api server is under the api server.
 
 ### gRPC
-There is an examples client in the /examples/grpc folder.
+We have built a gRPC client example in the /examples/grpc folder.  The code is self-explanatory we hope.  Works in conjuntions with the grpcServer in the /grpc folder.
+
+```
+node client list
+node client add
+node client insert 1 Bob bob@here.com
+node client get 123
+node client delete 1
+node client watch # Run in seperate terminal will push new users to screen
+```
+
 
 
 ### API
