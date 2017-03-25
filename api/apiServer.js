@@ -4,12 +4,12 @@ const testsRouter = require('api/modules/tests/tests.router');
 const healthRouter = require('api/modules/health/health.router');
 const utilsRouter = require('api/modules/utils/utils.router');
 
-const start = function() {    
+const start = function(serverIP, serverPort) {    
     var restify = require('restify');
-
-    //var hostip = tools.network.getHostIP();
-    var port = '7007';
-    var hostip = '0.0.0.0';
+    
+    const hostip =  serverIP === undefined ? '0.0.0.0' : serverIP ;
+    const port =  serverPort === undefined ? '7007' : serverPort ;
+    
     var server = restify.createServer();
 
     server.server.setTimeout(60000*5);
@@ -69,7 +69,7 @@ const start = function() {
     // 
 
     server.listen(port, hostip, function() {
-        console.log(`Store API listening at ${server.url}`.yellow);
+        console.log(`Base API listening at ${server.url}`.yellow);
     });
 };
 

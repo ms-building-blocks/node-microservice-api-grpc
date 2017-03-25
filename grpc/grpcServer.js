@@ -1,11 +1,13 @@
 "use strict";
 
 var colors = require('colors');
+var grpc = require('grpc');
 
-
-const start = function() {
-
-    var grpc = require('grpc');
+const start = function(serverIP, serverPort) {
+    
+    const hostip =  serverIP === undefined ? '0.0.0.0' : serverIP ;
+    const port =  serverPort === undefined ? '50051' : serverPort ;
+    
     var grpcServer = new grpc.Server();
     var baseProto = grpc.load('grpc/base.proto');
     // In-memory array of user objects
@@ -51,10 +53,10 @@ const start = function() {
         }
     });
 
-    grpcServer.bind('0.0.0.0:50051', grpc.ServerCredentials.createInsecure());
+    grpcServer.bind(`${hostip}:${port}`, grpc.ServerCredentials.createInsecure());
     grpcServer.start();
     
-    console.log(`grpcServer started on: 0.0.0.0:50051`.yellow)
+    console.log(`grpcServer started on: ${hostip}:${port}`.yellow)
 };
 
 module.exports.start = start;
