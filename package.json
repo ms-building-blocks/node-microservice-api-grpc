@@ -4,7 +4,7 @@
   "description": "A microservice boilerplate for node-restify-grpc",
   "main": "base.js",
   "scripts": {
-    "start": "nodemon base",
+    "start": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {

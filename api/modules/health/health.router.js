@@ -15,5 +15,4 @@ const health = function(req, res, next) {
 }
 
 routerInstance.get('/', health);
-
 module.exports = routerInstance;
