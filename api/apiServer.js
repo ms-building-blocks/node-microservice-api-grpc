@@ -1,3 +1,5 @@
+var colors = require('colors');
+
 const testsRouter = require('api/modules/tests/tests.router');
 const healthRouter = require('api/modules/health/health.router');
 const utilsRouter = require('api/modules/utils/utils.router');

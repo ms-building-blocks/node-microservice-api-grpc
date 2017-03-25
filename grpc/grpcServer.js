@@ -1,12 +1,17 @@
 "use strict";
 
-var grpc = require('grpc');
-var grpcServer = new grpc.Server();
-var baseProto = grpc.load('grpc/base.proto');
+var colors = require('colors');
+
 
 const start = function() {
 
+    var grpc = require('grpc');
+    var grpcServer = new grpc.Server();
+    var baseProto = grpc.load('grpc/base.proto');
     // In-memory array of user objects
+    
+    var userStream;
+    
     var users = [
         {
             id: 123,
@@ -48,6 +53,7 @@ const start = function() {
 
     grpcServer.bind('0.0.0.0:50051', grpc.ServerCredentials.createInsecure());
     grpcServer.start();
+    
     console.log(`grpcServer started on: 0.0.0.0:50051`.yellow)
 };
 
