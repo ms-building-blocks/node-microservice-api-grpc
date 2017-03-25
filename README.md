@@ -24,6 +24,8 @@ yarn or npm install.
 ### Prerequisites
 
 * Node > 7
+* NPM or Yarn
+* Nodemon if desired (change package.json script if not)
 
 ## Running the tests
 
