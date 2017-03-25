@@ -82,10 +82,7 @@ We are interested in contributors.  If you feel some passion for a project like 
 
 ## Authors
 
-* **Timothy Meade** 
-* <tim@invoxio.com>
-* [GitHub Invoxio](https://github.com/Invoxio)
-* [Web](https://www.invoxio.com) 
+* **Timothy Meade**  [Email](mailto:tim@invoxio.com) [GitHub](https://github.com/Invoxio) [Web](https://www.invoxio.com) 
 
 
 ## License
